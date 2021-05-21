@@ -36,12 +36,27 @@
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
 	NSLog(@"call method %@ args=%@",call.method,call.arguments);
-	SEL sel = NSSelectorFromString([call.method stringByAppendingString:@":result:"]);
-	if(sel && [self respondsToSelector:sel]){
-		((void(*)(id,SEL,...))objc_msgSend)(self,sel,call.arguments,result);
-	}else{
-		result(FlutterMethodNotImplemented);
-	}
+    if([call.method isEqualToString:@"init"]){
+        [self init:call.arguments result:result];
+    }else if([call.method isEqualToString:@"log"]){
+        [self log:call.arguments result:result];
+    }else if([call.method isEqualToString:@"flush"]){
+        [self flush:call.arguments result:result];
+    }else if([call.method isEqualToString:@"upload"]){
+        [self upload:call.arguments result:result];
+    }else if([call.method isEqualToString:@"cleanAllLogs"]){
+        [self cleanAllLogs:call.arguments result:result];
+    }else if([call.method isEqualToString:@"getUploadPath"]){
+        [self getUploadPath:call.arguments result:result];
+    }
+//	SEL sel = NSSelectorFromString([call.method stringByAppendingString:@":result:"]);
+//	if(sel && [self respondsToSelector:sel]){
+////        objc_msgSend(self,sel,call.arguments,result);
+//
+////		((void(*)(id,SEL,...))objc_msgSend)(self,sel,call.arguments,result);
+//	}else{
+//		result(FlutterMethodNotImplemented);
+//	}
 }
 
 - (void)init:(NSDictionary *)args result:(FlutterResult)result{
