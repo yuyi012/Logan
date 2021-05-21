@@ -38,27 +38,6 @@ uint64_t __max_file;
 uint32_t __max_reversed_date;
 
 
-@interface Logan : NSObject {
-    NSTimeInterval _lastCheckFreeSpace;
-}
-@property (nonatomic, copy) NSString *lastLogDate;
-
-#if OS_OBJECT_USE_OBJC
-@property (nonatomic, strong) dispatch_queue_t loganQueue;
-#else
-@property (nonatomic, assign) dispatch_queue_t loganQueue;
-#endif
-
-+ (instancetype)logan;
-
-- (void)writeLog:(NSString *)log logType:(NSUInteger)type;
-- (void)clearLogs;
-+ (NSDictionary *)allFilesInfo;
-+ (NSString *)currentDate;
-- (void)flush;
-- (void)filePathForDate:(NSString *)date block:(LoganFilePathBlock)filePathBlock;
-+ (void)uploadFileToServer:(NSString *)urlStr date:(NSString *)date appId:(NSString *)appId unionId:(NSString *)unionId deviceId:(NSString *)deviceId resultBlock:(LoganUploadResultBlock)resultBlock;
-@end
 
 void loganInit(NSData *_Nonnull aes_key16, NSData *_Nonnull aes_iv16, uint64_t max_file) {
     __AES_KEY = aes_key16;

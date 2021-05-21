@@ -116,3 +116,26 @@ extern void loganUpload(NSString * _Nonnull url, NSString * _Nonnull date,NSStri
  @return @"2018-11-21"
  */
 extern NSString *_Nonnull loganTodaysDate(void);
+
+
+@interface Logan : NSObject {
+    NSTimeInterval _lastCheckFreeSpace;
+}
+@property (nonatomic, copy) NSString *lastLogDate;
+
+#if OS_OBJECT_USE_OBJC
+@property (nonatomic, strong) dispatch_queue_t loganQueue;
+#else
+@property (nonatomic, assign) dispatch_queue_t loganQueue;
+#endif
+
++ (instancetype)logan;
+
+- (void)writeLog:(NSString *)log logType:(NSUInteger)type;
+- (void)clearLogs;
++ (NSDictionary *)allFilesInfo;
++ (NSString *)currentDate;
+- (void)flush;
+- (void)filePathForDate:(NSString *)date block:(LoganFilePathBlock)filePathBlock;
++ (void)uploadFileToServer:(NSString *)urlStr date:(NSString *)date appId:(NSString *)appId unionId:(NSString *)unionId deviceId:(NSString *)deviceId resultBlock:(LoganUploadResultBlock)resultBlock;
+@end
