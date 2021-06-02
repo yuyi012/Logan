@@ -35,7 +35,7 @@
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-	NSLog(@"call method %@ args=%@",call.method,call.arguments);
+	// NSLog(@"call method %@ args=%@",call.method,call.arguments);
     if([call.method isEqualToString:@"init"]){
         [self init:call.arguments result:result];
     }else if([call.method isEqualToString:@"log"]){
