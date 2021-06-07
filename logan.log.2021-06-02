@@ -1,0 +1,45 @@
+2021-06-02 16:16:37,152-[TS] ERROR http-nio-8080-exec-9 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:16:37,158-[TS] ERROR http-nio-8080-exec-9 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:18:05,990-[TS] ERROR logan-web-taskloop-AbstractBatchInsertService-0 com.meituan.logan.web.service.impl.LoganLogDetailServiceImpl - org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'log_type' in 'field list'
+### The error may exist in file [/Users/yuyi/apache-tomcat-8.5.66/webapps/ROOT/WEB-INF/classes/sqlmap/LoganLogDetailMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT INTO logan_log_detail(task_id,log_type,content,log_time) VALUES                        (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'log_type' in 'field list'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'log_type' in 'field list'
+2021-06-02 16:19:34,234-[TS] ERROR http-nio-8080-exec-10 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:19:34,240-[TS] ERROR http-nio-8080-exec-10 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:19:39,663-[TS] ERROR http-nio-8080-exec-1 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:19:39,673-[TS] ERROR http-nio-8080-exec-1 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:19:47,716-[TS] ERROR http-nio-8080-exec-3 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:19:47,725-[TS] ERROR http-nio-8080-exec-3 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:19:57,283-[TS] ERROR http-nio-8080-exec-5 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:19:57,292-[TS] ERROR http-nio-8080-exec-5 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 16:22:18,615-[TS] ERROR logan-web-taskloop-AbstractBatchInsertService-0 com.meituan.logan.web.service.impl.LoganLogDetailServiceImpl - org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'content' at row 2
+### The error may exist in file [/Users/yuyi/apache-tomcat-8.5.66/webapps/ROOT/WEB-INF/classes/sqlmap/LoganLogDetailMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT INTO logan_log_detail(task_id,log_type,content,log_time) VALUES                        (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'content' at row 2
+; Data truncation: Data too long for column 'content' at row 2; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'content' at row 2
+2021-06-02 16:23:42,559-[TS] ERROR logan-web-taskloop-AbstractBatchInsertService-0 com.meituan.logan.web.service.impl.LoganLogDetailServiceImpl - org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'content' at row 6
+### The error may exist in file [/Users/yuyi/apache-tomcat-8.5.66/webapps/ROOT/WEB-INF/classes/sqlmap/LoganLogDetailMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: INSERT INTO logan_log_detail(task_id,log_type,content,log_time) VALUES                        (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)          ,              (?,?,?,?)
+### Cause: com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'content' at row 6
+; Data truncation: Data too long for column 'content' at row 6; nested exception is com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'content' at row 6
+2021-06-02 17:41:29,564-[TS] ERROR http-nio-8080-exec-8 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:43:26,502-[TS] ERROR http-nio-8080-exec-9 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:43:26,520-[TS] ERROR http-nio-8080-exec-9 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:44:25,771-[TS] ERROR http-nio-8080-exec-10 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:44:25,789-[TS] ERROR http-nio-8080-exec-10 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:44:48,542-[TS] ERROR http-nio-8080-exec-1 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:44:48,575-[TS] ERROR http-nio-8080-exec-1 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:45:49,007-[TS] ERROR http-nio-8080-exec-5 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:45:49,029-[TS] ERROR http-nio-8080-exec-5 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:47:14,005-[TS] ERROR http-nio-8080-exec-9 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream
+2021-06-02 17:47:14,041-[TS] ERROR http-nio-8080-exec-9 com.meituan.logan.web.parser.LoganProtocol - java.io.EOFException: Unexpected end of ZLIB input stream

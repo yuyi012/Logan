@@ -92,7 +92,12 @@ public class LoganProtocol {
 
     private static byte[] decompress(byte[] contentBytes) {
         try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-            IOUtils.copy(new GZIPInputStream(new ByteArrayInputStream(contentBytes)), out);
+            ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(contentBytes);
+            GZIPInputStream inputStream = new GZIPInputStream(byteArrayInputStream);
+            IOUtils.copy(inputStream, out);
+            byteArrayInputStream.close();
+            inputStream.close();
+            out.close();
             return out.toByteArray();
         } catch (IOException e) {
             LOGGER.error(e);

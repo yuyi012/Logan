@@ -1,7 +1,7 @@
 import axios from "axios";
 import { message } from 'antd';
 
-const BASE_URL = process.defineEnv.API_BASE_URL;
+const BASE_URL = "http://localhost:8080/";
 const API_TIME_OUT = 30000;
 let pendingRequests = [];
 
